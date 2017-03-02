@@ -59,7 +59,7 @@ function front_page_genesis_meta() {
  * @return void
  */
 function enqueue_front_page_script() {
-	wp_enqueue_script( 'altitude-script', CHILD_THEME_DIR . '/assets/js/home.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_enqueue_script( 'altitude-script', get_stylesheet_directory_uri() . '/assets/js/home.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 }
 
 // Define front-page body class.
