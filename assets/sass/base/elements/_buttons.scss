@@ -1,0 +1,106 @@
+/* Buttons
+--------------------------------------------- */
+
+button:focus,
+button:hover,
+input:focus[type="button"],
+input:focus[type="reset"],
+input:focus[type="submit"],
+input:hover[type="button"],
+input:hover[type="reset"],
+input:hover[type="submit"],
+.button.clear:focus,
+.button.clear:hover,
+.button:focus,
+.button:hover,
+.footer-widgets .widget .button,
+.footer-widgets button,
+.footer-widgets input[type="button"],
+.footer-widgets input[type="reset"],
+.footer-widgets input[type="submit"],
+.widget .button.clear:focus,
+.widget .button.clear:hover,
+.widget .button:focus,
+.widget .button:hover {
+	background-color: #000;
+	border: 2px solid #000;
+	color: #fff;
+}
+
+.button {
+	display: inline-block;
+}
+
+button.small,
+input[type="button"].small,
+input[type="reset"].small,
+input[type="submit"].small,
+.button.small {
+	padding: 8px 16px;
+}
+
+.footer-widgets .widget .button.clear,
+.widget .button.clear {
+	background-color: transparent;
+	border: 2px solid #000;
+	color: #000;
+}
+
+.image-section .button {
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 20px;
+}
+
+.image-section  .widget .button.clear {
+	background-color: transparent;
+	border-color: #fff;
+	color: #fff;
+}
+
+.footer-widgets button:focus,
+.footer-widgets button:hover,
+.footer-widgets input:focus[type="button"],
+.footer-widgets input:focus[type="reset"],
+.footer-widgets input:focus[type="submit"],
+.footer-widgets input:hover[type="button"],
+.footer-widgets input:hover[type="reset"],
+.footer-widgets input:hover[type="submit"],
+.footer-widgets .widget .button:focus,
+.footer-widgets .widget .button:hover,
+.image-section button:focus,
+.image-section button:hover,
+.image-section input:focus[type="button"],
+.image-section input:focus[type="reset"],
+.image-section input:focus[type="submit"],
+.image-section input:hover[type="button"],
+.image-section input:hover[type="reset"],
+.image-section input:hover[type="submit"],
+.image-section .widget .button:focus,
+.image-section .widget .button:hover {
+	background-color: #fff;
+	border: 2px solid #fff;
+	color: #000;
+}
+
+.site-container button:disabled,
+.site-container button:disabled:hover,
+.site-container input:disabled,
+.site-container input:disabled:hover,
+.site-container input[type="button"]:disabled,
+.site-container input[type="button"]:disabled:hover,
+.site-container input[type="reset"]:disabled,
+.site-container input[type="reset"]:disabled:hover,
+.site-container input[type="submit"]:disabled,
+.site-container input[type="submit"]:disabled:hover,
+.site-container .footer-widgets .widget input[type="submit"]:disabled,
+.site-container .footer-widgets .widget input[type="submit"]:disabled:hover {
+	background-color: #ddd;
+	border-color: #ddd;
+	color: #444;
+	cursor: not-allowed;
+}
+
+.post-password-form input[type="password"] {
+	margin-bottom: 15px;
+}

@@ -1,0 +1,77 @@
+/* Flexible Widgets
+--------------------------------------------- */
+
+.flexible-widgets {
+	padding-bottom: 60px;
+	padding-top: 100px;
+}
+
+.flexible-widgets .widget {
+	float: left;
+	margin: 0 0 40px 2.564102564102564%;
+}
+
+.flexible-widgets.widget-full .widget,
+.flexible-widgets.widget-area .widget:nth-of-type(1),
+.flexible-widgets.widget-halves.uneven .widget:last-of-type {
+	background: none;
+	margin-left: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.widget-area.flexible-widgets.widget-half .widget,
+.flexible-widgets.widget-halves .widget {
+	width: 48.717948717948715%;
+}
+
+.flexible-widgets.widget-thirds .widget {
+	width: 31.623931623931625%;
+}
+
+.flexible-widgets.widget-fourths .widget {
+	width: 23.076923076923077%;
+}
+
+.flexible-widgets.widget-halves .widget:nth-child(even),
+.flexible-widgets.widget-thirds .widget:nth-child(3n+2),
+.flexible-widgets.widget-fourths .widget:nth-child(4n+2) {
+	clear: left;
+	margin-left: 0;
+}
+
+.solid-section .widget {
+	background-color: #fff;
+	padding: 40px;
+}
+
+.solid-section  .widget:not(:first-child) .widget-title {
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+}
+
+.flexible-widgets p.large {
+	font-size: 36px;
+	font-size: 3.6rem;
+	line-height: 1;
+}
+
+.flexible-widgets p.price {
+	font-size: 32px;
+	font-size: 3.2rem;
+	font-weight: 800;
+	line-height: 1.2;
+	margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1023px) {
+
+	.flexible-widgets.widget-full .widget,
+	.flexible-widgets.widget-halves .widget,
+	.flexible-widgets.widget-thirds .widget,
+	.flexible-widgets.widget-fourths .widget {
+		margin: 0 auto 20px;
+		width: 100%;
+	}
+}

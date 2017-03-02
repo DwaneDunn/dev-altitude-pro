@@ -1,0 +1,61 @@
+/* Entry Meta
+--------------------------------------------- */
+
+p.entry-meta {
+	font-size: 20px;
+	font-size: 2rem;
+	margin-bottom: 0;
+}
+
+.entry-header,
+.entry-footer {
+	text-align: center;
+}
+
+.entry-header p.entry-meta {
+	font-weight: 700;
+	letter-spacing: 2px;
+	margin-bottom: 16px;
+	text-transform: uppercase;
+}
+
+.entry-header::after {
+	border-bottom: 1px solid #000;
+	content: "";
+	display: block;
+	margin: 0 auto 60px;
+	padding-bottom: 30px;
+	width: 25%;
+}
+
+.image-section .entry-header::after {
+	border-color: #fff;
+}
+
+.entry-footer::before {
+	border-top: 1px solid #000;
+	content: "";
+	display: block;
+	margin: 30px auto 0;
+	padding-top: 60px;
+	width: 25%;
+}
+
+.sidebar .entry-header::after {
+	display: none;
+}
+
+.entry-categories::before,
+.entry-tags::before {
+	display: inline-block;
+	font: normal 20px/1 "dashicons";
+	margin-right: 5px;
+	margin-top: 2px;
+	vertical-align: top;
+	-webkit-font-smoothing: antialiased;
+}
+
+.entry-comments-link::before {
+	content: "\2014";
+	margin: 0 6px 0 2px;
+}

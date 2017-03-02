@@ -1,0 +1,25 @@
+/* Objects
+--------------------------------------------- */
+
+embed,
+iframe,
+img,
+object,
+video,
+.wp-caption {
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+}
+
+.full-width-content img.pull-left {
+	float: left;
+	margin: 0 40px 40px -200px;
+}
+
+.full-width-content img.pull-right {
+	float: right;
+	margin: 0 -200px 40px 40px;
+}

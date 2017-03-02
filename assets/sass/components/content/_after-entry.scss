@@ -1,0 +1,20 @@
+/* After Entry
+--------------------------------------------- */
+
+.after-entry {
+	border-top: 1px solid #000;
+	padding: 40px 0;
+}
+
+.after-entry .widget {
+	margin-bottom: 40px;
+}
+
+.after-entry p:last-child,
+.after-entry .widget:last-child {
+	margin: 0;
+}
+
+.after-entry li {
+	list-style-type: none;
+}

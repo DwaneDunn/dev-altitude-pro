@@ -1,0 +1,71 @@
+/* Forms
+--------------------------------------------- */
+
+input,
+select,
+textarea {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 0;
+	box-shadow: none;
+	color: #000;
+	font-size: 20px;
+	font-size: 2rem;
+	font-weight: 200;
+	padding: 20px;
+	width: 100%;
+}
+
+input:focus,
+textarea:focus {
+	border: 1px solid #999;
+	outline: none;
+}
+
+.front-page input:focus,
+.front-page textarea:focus {
+	border: 1px solid #22a1c4;
+	outline: none;
+}
+
+input[type="checkbox"],
+input[type="image"],
+input[type="radio"] {
+	width: auto;
+}
+
+::-moz-placeholder {
+	color: #000;
+	opacity: 1;
+}
+
+::-webkit-input-placeholder {
+	color: #000;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button,
+.widget .button {
+	background-color: #22a1c4;
+	border: 2px solid #22a1c4;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 14px;
+	font-size: 1.4rem;
+	font-weight: 800;
+	letter-spacing: 2px;
+	padding: 15px 25px;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+	white-space: normal;
+	width: auto;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button {
+	display: none;
+}

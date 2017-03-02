@@ -1,0 +1,24 @@
+/* Widgets
+---------------------------------------------------------------------------------------------------- */
+
+.widget {
+	word-wrap: break-word;
+
+	ol > li {
+		list-style-position: inside;
+		list-style-type: decimal;
+		padding-left: 20px;
+		text-indent: -20px;
+	}
+
+	ul li {
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+	}
+
+	li li {
+		border: none;
+		margin: 0 0 0 30px;
+		padding: 0;
+	}
+}

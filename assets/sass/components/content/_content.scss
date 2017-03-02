@@ -1,0 +1,51 @@
+/* Content
+--------------------------------------------- */
+
+.content {
+	float: left;
+	width: 700px;
+}
+
+.page .content {
+	padding-bottom: 50px;
+}
+
+.sidebar-content .content {
+	float: right;
+}
+
+.full-width-content .content {
+	padding: 0 200px 50px;
+	width: 100%;
+}
+
+.full-width-content.front-page .content {
+	padding: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+
+	.content {
+		width: 520px;
+	}
+
+	.full-width-content .content {
+		padding: 0 110px;
+	}
+}
+
+@media only screen and (max-width: 1023px) {
+
+	.full-width-content .content {
+		padding: 0;
+	}
+
+	.full-width-content img.pull-left {
+		margin-left: 0;
+	}
+
+	.full-width-content img.pull-right {
+		margin-right: 0;
+	}
+
+}

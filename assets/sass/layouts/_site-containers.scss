@@ -1,0 +1,89 @@
+/* Site Containers
+--------------------------------------------- */
+
+.site-inner,
+.wrap {
+	float: none;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.site-inner {
+	background-color: #fff;
+	clear: both;
+	margin-top: 170px;
+	position: relative;
+	z-index: 9;
+	word-wrap: break-word;
+}
+
+.front-page .site-container .site-inner {
+	margin-top: 0;
+	max-width: 100%;
+}
+
+.altitude-landing .site-container .site-inner {
+	margin-top: 100px;
+}
+
+.secondary-nav .site-inner {
+	margin-top: 250px;
+}
+
+@media only screen and (max-width: 1280px) {
+
+	.site-inner,
+	.wrap {
+		max-width: 1140px;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+
+	.site-inner,
+	.wrap {
+		max-width: 960px;
+	}
+}
+
+@media only screen and (max-width: 1023px) {
+
+	.site-inner,
+	.wrap {
+		max-width: 768px;
+	}
+
+	.secondary-nav .site-inner {
+		margin-top: 80px;
+	}
+
+	.front-page .site-inner {
+		max-width: none;
+	}
+
+	.front-page .site-inner {
+		margin-top: 0;
+	}
+
+	.site-inner {
+		margin-top: 80px;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+
+	.site-inner,
+	.wrap {
+		max-width: none;
+		width: 100%;
+	}
+
+	.site-inner,
+	.wrap {
+		padding: 0 5%;
+	}
+
+	.front-page .site-inner {
+		padding: 0;
+	}
+}

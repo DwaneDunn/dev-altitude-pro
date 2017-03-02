@@ -1,0 +1,159 @@
+/* Front Page
+--------------------------------------------- */
+
+.image-section,
+.solid-section {
+	clear: both;
+	text-align: center;
+	width: 100%;
+}
+
+.image-section {
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0.8) 80%, rgba(0,0,0,0.9) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.2)), color-stop(30%,rgba(0,0,0,0.5)), color-stop(80%,rgba(0,0,0,0.8)), color-stop(100%,rgba(0,0,0,0.9)));
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 30%,rgba(0,0,0,0.8) 80%,rgba(0,0,0,0.9) 100%);
+	background: -o-linear-gradient(top,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 30%,rgba(0,0,0,0.8) 80%,rgba(0,0,0,0.9) 100%);
+	background: -ms-linear-gradient(top,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 30%,rgba(0,0,0,0.8) 80%,rgba(0,0,0,0.9) 100%);
+	background: linear-gradient(to bottom,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 30%,rgba(0,0,0,0.8) 80%,rgba(0,0,0,0.9) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33000000', endColorstr='#e6000000',GradientType=0 );
+	display: table;
+	overflow: hidden;
+	table-layout: fixed;
+	width: 100%;
+}
+
+.image-section .widget-area {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.image-section,
+.image-section a {
+	color: #fff;
+}
+
+.image-section a:focus,
+.image-section a:hover,
+.image-section .featured-content .entry-title a:focus,
+.image-section .featured-content .entry-title a:hover {
+	color: #22a1c4;
+}
+
+.solid-section {
+	background-color: #fff;
+}
+
+.front-page-2,
+.front-page-3,
+.front-page-4,
+.front-page-5,
+.front-page-6,
+.front-page-7 {
+	border-top: 54px solid transparent;
+	margin-top: -54px;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip:    padding;
+	background-clip:         padding-box;
+	position: relative;
+	z-index: 9;
+}
+
+.front-page-1,
+.front-page-3,
+.front-page-5,
+.front-page-7 {
+	background-attachment: fixed;
+	background-color: #fff;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size:    cover;
+	background-size:         cover;
+}
+
+.front-page-1 {
+	position: relative;
+}
+
+.front-page-1 .image-section {
+	padding-top: 75px;
+}
+
+.secondary-nav .front-page-1 .image-section {
+	padding-top: 150px;
+}
+
+.front-page-4 .solid-section {
+	background-color: #f3f3f3;
+}
+
+.bottom-image {
+	margin-bottom: -120px;
+	margin-top: 100px;
+}
+
+.bottom-image img {
+	margin-bottom: -10px;
+}
+
+.front-page .field-wrap:last-child {
+	margin-bottom: 0;
+}
+
+.small-disclaimer {
+	font-size: 14px;
+	font-size: 1.4rem;
+	font-style: italic;
+}
+
+@media only screen and (max-width: 1200px) {
+
+	.front-page-1,
+	.front-page-3,
+	.front-page-5,
+	.front-page-7 {
+	    background-attachment: scroll;
+	}
+}
+
+@media only screen and (max-width: 1023px) {
+
+	.image-section h2,
+	.solid-section h2 {
+		font-size: 60px;
+		font-size: 6rem;
+	}
+
+	.front-page-1 .image-section,
+	.secondary-nav .front-page-1 .image-section {
+		padding-top: 0;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+
+	.front-page-2,
+	.front-page-3,
+	.front-page-4,
+	.front-page-5,
+	.front-page-6,
+	.front-page-7 {
+		border-top: 0;
+		margin-top: 0;
+	}
+
+	.image-section .flexible-widgets {
+		padding-bottom: 80px;
+	}
+
+	.solid-section .flexible-widgets {
+		padding-bottom: 40px;
+		padding-top: 60px;
+	}
+
+	.bottom-image {
+		margin-top: 60px;
+		margin-bottom: -80px;
+	}
+}

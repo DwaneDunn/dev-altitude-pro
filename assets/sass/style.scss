@@ -1,0 +1,41 @@
+/*!
+	Theme Name: Developers Altitude Pro
+	Theme URI: https://dwanedunn.com
+
+	Description: Developers Altitude Pro Theme
+	Author: Dwane Dunn
+	Author URI: https://dwanedunn.com
+
+	Version: 1.0.0
+
+	Tags: genesis
+
+	Template: genesis
+	Template Version: 2.1
+
+	License: GPL-2.0+
+	License URI: http://www.opensource.org/licenses/gpl-license.php
+
+	Text Domain: dev-altitude-pro
+*/
+
+@import "base/index";
+@import "components/accesibility/screen-reader-text";
+@import "layouts/index";
+@import "common/index";
+@import "components/index";
+@import "plugins/index";
+@import "components/accesibility/skip-links";
+@import "components/header/index";
+@import "components/navigation/index";
+@import "components/content/front-page";
+@import "components/content/dashicons";
+@import "components/widgets/flexible";
+@import "components/content/content";
+@import "components/content/entries";
+@import "components/content/entry-meta";
+@import "components/content/after-entry";
+@import "components/content/pagination";
+@import "components/comments/index";
+@import "components/content/sidebar";
+@import "components/footer/index";
