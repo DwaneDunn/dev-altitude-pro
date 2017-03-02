@@ -13,13 +13,14 @@ namespace KnowITMedia\DevAltitudePro;
 
 use function KnowITMedia\DevAltitudePro\widget_area_class;
 
-add_action( 'genesis_meta', __NAMESPACE__ . '\front_page_genesis_meta' );
+add_action( 'genesis_meta', __NAMESPACE__ . '\add_front_page_genesis_meta' );
+
 /**
  * Add widget support for homepage. If no widgets active, display the default loop.
  *
  * @since 1.0.0
  */
-function front_page_genesis_meta() {
+function add_front_page_genesis_meta() {
 
 	if ( is_active_sidebar( 'front-page-1' ) || is_active_sidebar( 'front-page-2' ) || is_active_sidebar( 'front-page-3' ) || is_active_sidebar( 'front-page-4' ) || is_active_sidebar( 'front-page-5' ) || is_active_sidebar( 'front-page-6' ) || is_active_sidebar( 'front-page-7' ) ) {
 
@@ -39,7 +40,7 @@ function front_page_genesis_meta() {
 		remove_action( 'genesis_loop', 'genesis_do_loop' );
 
 		// Add homepage widgets.
-		add_action( 'genesis_loop', __NAMESPACE__ . '\front_page_widgets' );
+		add_action( 'genesis_loop', __NAMESPACE__ . '\create_front_page_widgets' );
 
 		// Add featured-section body class.
 		if ( is_active_sidebar( 'front-page-1' ) ) {
@@ -71,7 +72,13 @@ function body_class( $classes ) {
 
 }
 
-// Define featured-section body class.
+/**
+ * Define featured-section body class.
+ *
+ * @param  array $classes
+ *
+ * @return array
+ */
 function featured_body_class( $classes ) {
 
 	$classes[] = 'featured-section';
@@ -87,7 +94,7 @@ function featured_body_class( $classes ) {
  *
  * @return void
  */
-function front_page_widgets() {
+function create_front_page_widgets() {
 
 	echo '<h2 class="screen-reader-text">' . __( 'Main Content', 'altitude-pro' ) . '</h2>';
 
