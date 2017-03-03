@@ -1,8 +1,6 @@
 <?php
 
 /**
- *  Checked!
- *
  *  Theme initialization
  *
  *  @package    KnowITMedia\DevAltitudePro
@@ -29,8 +27,7 @@ function init_constants() {
 	define( 'CHILD_THEME_NAME', $child_theme->get( 'Name' ) );
 	define( 'CHILD_THEME_URL', $child_theme->get( 'Theme URI' ) );
 	define( 'CHILD_THEME_VERSION', $child_theme->get( 'Version' ) );
-	//define( 'CHILD_TEXT_DOMAIN', $child_theme->get( 'Text Domain' ) );
-	$CHILD_TEXT_DOMAIN = 'dev-alltitude-pro';
+	define( 'CHILD_TEXT_DOMAIN', $child_theme->get( 'Text Domain' ) );
 
 	// Define directory constants.
 	define( 'CHILD_THEME_DIR', get_stylesheet_directory() );
