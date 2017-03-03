@@ -56,6 +56,8 @@ function add_front_page_genesis_meta() {
 /**
  * Define front page scripts.
  *
+ * added dev-altitude-pro to replace CHILD_TEXT_DOMAIN
+ *
  * @since 1.0.0
  *
  * @return void
@@ -85,7 +87,7 @@ function featured_body_class( $classes ) {
 	$classes[] = 'featured-section';
 
 	return $classes;
-	
+
 }
 
 /**
