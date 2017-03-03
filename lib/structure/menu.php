@@ -3,6 +3,8 @@
 /**
  *  Menu HTML markup structure
  *
+ *  Checked!
+ *  
  *  @package    KnowITMedia\DevAltitudePro
  *  @since      1.0.0
  *  @author     Dwane Dunn

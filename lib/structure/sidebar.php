@@ -1,6 +1,8 @@
 <?php
 
 /**
+ *  Checked!
+ *
  *  Sidebar (widgetized areas) HTML markup structure
  *
  *  @package    KnowITMedia\DevAltitudePro
@@ -14,7 +16,7 @@
 namespace KnowITMedia\DevAltitudePro;
 
 /**
- * Registers the front-page sidebar widget areas.
+ * Register the front-page sidebar widget areas.
  *
  * @since 1.0.0
  *
@@ -62,8 +64,8 @@ function register_front_page_sidebars() {
 
 
 /**
- * Gets the number of sidebar widgets.
- * Used on front-page.php
+ * Count the number of widgets on Front-Page.
+ *
  * @since 1.0.0
  *
  * @param  array
@@ -80,8 +82,7 @@ function count_widgets( $id ) {
 }
 
 /**
- * Calculates Widget Areas CSS Classes for multiple widgets.
- * Being used to on front-page.php
+ * Calculate widget area classes.
  *
  * @since 1.0.0
  *

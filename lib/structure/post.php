@@ -3,6 +3,8 @@
 /**
  *  Post Structure Handling
  *
+ *  Checked!
+ *
  *  @package    KnowITMedia\DevAltitudePro
  *  @since      1.0.0
  *  @author     Dwane Dunn
@@ -26,5 +28,5 @@ add_filter( 'genesis_author_box_gravatar_size', __NAMESPACE__ . '\setup_author_b
 function setup_author_box_gravatar_size( $size ) {
 
 	return 176;
-	
+
 }

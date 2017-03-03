@@ -1,6 +1,8 @@
 <?php
 
 /**
+ *  Checked!
+ *
  *  Developer Altitude Pro
  *
  *  This file adds the theme helper functions to the Altitude Pro Theme.

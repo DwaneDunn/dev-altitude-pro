@@ -1,7 +1,7 @@
 /**
  * This script adds the jquery effects to the front page of the Altitude Pro Theme.
  *
- * @package Altitude\JS
+ * @package KnowITMedia\DevAltitudePro\Assets\JS
  * @author StudioPress
  * @license GPL-2.0+
  */

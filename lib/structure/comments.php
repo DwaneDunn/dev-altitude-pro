@@ -3,6 +3,8 @@
 /**
  *  Comments Structure Handling
  *
+ *  Checked!
+ *
  *  @package    KnowITMedia\DevAltitudePro
  *  @since      1.0.0
  *  @author     Dwane Dunn

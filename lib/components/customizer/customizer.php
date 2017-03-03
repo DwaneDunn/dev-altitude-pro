@@ -1,6 +1,8 @@
 <?php
 
 /**
+ *  Checked!
+ *
  *  Developer Altitude Pro
  *
  *  This file adds the CSS from the Customizer options.
@@ -15,7 +17,7 @@
 
 namespace KnowITMedia\DevAltitudePro\Customizer;
 
-use WP_Customize_Color_Control; // Because we are in a namespace, brings it in.
+use WP_Customize_Color_Control;
 use WP_Customize_Image_Control;
 
 add_action( 'customize_register', __NAMESPACE__ . '\register_with_customizer' );
@@ -34,8 +36,8 @@ function register_with_customizer( $wp_customize ) {
 
 	$wp_customize->add_section(
 		$prefix . '-settings', array(
-			'description' => __( 'Use the included default images or personalize your site by uploading your own images.<br /><br />The default images are <strong>1600 pixels wide and 1050 pixels tall</strong>.', $prefix . '-pro' ),
-			'title'       => __( 'Front Page Background Images', $prefix . '-pro' ),
+			'description' => __( 'Use the included default images or personalize your site by uploading your own images.<br /><br />The default images are <strong>1600 pixels wide and 1050 pixels tall</strong>.', CHILD_TEXT_DOMAIN ),
+			'title'       => __( 'Front Page Background Images', CHILD_TEXT_DOMAIN ),
 			'priority'    => 35,
 		)
 	);
@@ -45,7 +47,7 @@ function register_with_customizer( $wp_customize ) {
 		$wp_customize->add_setting(
 			$image . '-' . $prefix . '-image',
 			array(
-				'default'           => sprintf( '%s/assets/images/bg-%s.jpg', CHILD_URL, $image ),
+				'default'           => sprintf( '%s/assets/images/bg-%s.jpg', CHILD_THEME_URI, $image ),
 				'sanitize_callback' => 'esc_url_raw',
 				'type'              => 'option',
 			)
@@ -56,7 +58,7 @@ function register_with_customizer( $wp_customize ) {
 				$wp_customize,
 				$image . '-' . $prefix . '-image',
 				array(
-					'label'    => sprintf( __( 'Featured Section %s Image:', $prefix . '-pro' ), $image ),
+					'label'    => sprintf( __( 'Featured Section %s Image:', CHILD_TEXT_DOMAIN ), $image ),
 					'section'  => $prefix . '-settings',
 					'settings' => $image . '-' . $prefix . '-image',
 					'priority' => $image+1,
@@ -80,8 +82,8 @@ function register_with_customizer( $wp_customize ) {
 			$wp_customize,
 			$prefix . '_link_color',
 			array(
-				'description' => __( 'Change the color of links, buttons in content and white front page sections, the hover color of linked titles, the footer widget background color, and more.', $prefix . '-pro' ),
-				'label'       => __( 'Link Color', $prefix . '-pro' ),
+				'description' => __( 'Change the color of links, buttons in content and white front page sections, the hover color of linked titles, the footer widget background color, and more.', CHILD_TEXT_DOMAIN ),
+				'label'       => __( 'Link Color', CHILD_TEXT_DOMAIN ),
 				'section'     => 'colors',
 				'settings'    => $prefix . '_link_color',
 			)
@@ -102,8 +104,8 @@ function register_with_customizer( $wp_customize ) {
 			$wp_customize,
 			$prefix . '_accent_color',
 			array(
-				'description' => __( 'Change the color of buttons used in front page image sections, the focus color of mobile menu buttons, and the hover color for footer links.', $prefix . '-pro' ),
-				'label'       => __( 'Accent Color', $prefix . '-pro' ),
+				'description' => __( 'Change the color of buttons used in front page image sections, the focus color of mobile menu buttons, and the hover color for footer links.', CHILD_TEXT_DOMAIN ),
+				'label'       => __( 'Accent Color', CHILD_TEXT_DOMAIN ),
 				'section'     => 'colors',
 				'settings'    => $prefix . '_accent_color',
 			)

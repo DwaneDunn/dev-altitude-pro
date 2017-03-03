@@ -1,6 +1,8 @@
 <?php
 
 /**
+ *  Checked!
+ *
  *  File autoloader
  *
  *  @package    KnowITMedia\DevAltitudePro
@@ -14,7 +16,7 @@
 namespace KnowITMedia\DevAltitudePro;
 
 /**
- * Loads nonadmin files
+ * Load nonadmin files
  *
  * @since 1.0.0
  *
@@ -36,6 +38,9 @@ function load_nonadmin_files() {
 		'structure/menu.php',
 		'structure/post.php',
 		'structure/sidebar.php',
+		'components/woocommerce/woocommerce-setup.php',
+		'components/woocommerce/woocommerce-output.php',
+		'components/woocommerce/woocommerce-notice.php',
 	);
 
 	load_specified_files( $filenames );
@@ -76,12 +81,3 @@ function load_specified_files( array $filenames, $folder_root = '' ) {
 }
 
 load_nonadmin_files();
-
-// Include the WooCommerce setup functions.
-include_once( get_stylesheet_directory() . '/lib/components/woocommerce/woocommerce-setup.php' );
-
-// Include the WooCommerce custom CSS if customized.
-include_once( get_stylesheet_directory() . '/lib/components/woocommerce/woocommerce-output.php' );
-
-// Include notice to install Genesis Connect for WooCommerce.
-include_once( get_stylesheet_directory() . '/lib/components/woocommerce/woocommerce-notice.php' );

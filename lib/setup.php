@@ -1,6 +1,8 @@
 <?php
 
 /**
+ *  Checked!
+ *
  *  Setup theme defaults.
  *
  *  @package    KnowITMedia\DevAltitudePro
@@ -98,7 +100,7 @@ function adds_new_image_sizes() {
 	);
 
 	foreach( $config as $name => $args ){
-		// Check to see what was entered for crop and setting to false if nothing.
+	// Check to see what was entered for crop, set to false if not entered.
 		$crop = array_key_exists( 'crop', $args ) ? $args['crop'] : false;
 
 		add_image_size( $name, $args['width'], $args['height'], $crop );

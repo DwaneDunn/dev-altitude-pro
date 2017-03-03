@@ -1,7 +1,9 @@
 <?php
 
 /**
- *  Description
+ *  Developer Altitude Pro
+ *
+ *  This file adds the functions to the Developer Altitude Pro Theme.
  *
  *  @package    KnowITMedia\DevAltitudePro
  *  @since      1.0.0

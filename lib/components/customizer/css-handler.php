@@ -1,6 +1,8 @@
 <?php
 
 /**
+ *  Checked!
+ *
  *  Developer Altitude Pro
  *
  *  This file adds the required CSS to the frontend when customized to the Developer Altitude Pro Theme.
@@ -39,7 +41,7 @@ function build_inline_css_from_customizer_settings() {
 	$css = '';
 
 	foreach( $opts as $opt ) {
-		$settings[$opt]['image'] = preg_replace( '/^https?:/', '', get_option( $opt . '-' . $prefix . '-image', sprintf( '%s/assets/images/bg-%s.jpg', get_stylesheet_directory_uri(), $opt ) ) );
+		$settings[$opt]['image'] = preg_replace( '/^https?:/', '', get_option( $opt . '-' . $prefix . '-image', sprintf( '%s/assets/images/bg-%s.jpg', CHILD_THEME_URI, $opt ) ) );
 	}
 
 	foreach ( $settings as $section => $value ) {

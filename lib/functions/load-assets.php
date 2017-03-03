@@ -1,6 +1,8 @@
 <?php
 
 /**
+ *  Checked!
+ *
  *  Asset loader handler
  *
  *  @package    KnowITMedia\DevAltitudePro
@@ -13,9 +15,6 @@
 
 namespace KnowITMedia\DevAltitudePro;
 
-$prefix = 'altitude';
-
-
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_assets' );
 /**
  * Enqueue scripts and styles.
@@ -26,15 +25,15 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_assets' );
  */
 function enqueue_assets() {
 
-	wp_enqueue_script( $prefix . '-global', CHILD_THEME_DIR . '/assets/js/global.js', array( 'jquery' ), '1.0.0' );
+	wp_enqueue_script( CHILD_TEXT_DOMAIN . '-global', CHILD_THEME_URI . '/assets/js/global.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 
 	wp_enqueue_style( 'dashicons' );
-	wp_enqueue_style( $prefix . '-google-fonts', '//fonts.googleapis.com/css?family=Ek+Mukta:200,800', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( CHILD_TEXT_DOMAIN . '-google-fonts', '//fonts.googleapis.com/css?family=Ek+Mukta:200,800', array(), CHILD_THEME_VERSION );
 
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
-	wp_enqueue_script( $prefix . '-responsive-menu', CHILD_URL . '/assets/js/responsive-menus' . $suffix . '.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_enqueue_script( CHILD_TEXT_DOMAIN . 'responsive-menu', CHILD_THEME_URI . '/assets/js/responsive-menus' . $suffix . '.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 
-	wp_localize_script( $prefix . '-responsive-menu', 'genesis_responsive_menu', 'localized_responsive_menu_settings' );
+	wp_localize_script( CHILD_TEXT_DOMAIN . '-responsive-menu', 'genesis_responsive_menu', localized_responsive_menu_settings() );
 
 }
 
