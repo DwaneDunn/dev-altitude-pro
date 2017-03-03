@@ -1,7 +1,5 @@
 <?php
 /**
- * Checked!
- *
  * Front page to the Developer Altitude Pro Theme.
  *
  *  @package    KnowITMedia\DevAltitudePro
@@ -15,8 +13,6 @@ namespace KnowITMedia\DevAltitudePro;
 
 use function KnowITMedia\DevAltitudePro\Customizer\get_settings_prefix;
 use function KnowITMedia\DevAltitudePro\widget_area_class;
-
-//$prefix = get_settings_prefix;
 
 add_action( 'genesis_meta', __NAMESPACE__ . '\add_front_page_genesis_meta' );
 
@@ -65,7 +61,7 @@ function add_front_page_genesis_meta() {
  * @return void
  */
 function enqueue_front_page_script() {
-	wp_enqueue_script( CHILD_TEXT_DOMAIN . '-script', CHILD_THEME_URI . '/assets/js/home.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_enqueue_script( 'dev-altitude-pro-script', CHILD_THEME_URI . '/assets/js/home.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 }
 
 // Define front-page body class.
@@ -89,7 +85,7 @@ function featured_body_class( $classes ) {
 	$classes[] = 'featured-section';
 
 	return $classes;
-
+	
 }
 
 /**
@@ -101,8 +97,8 @@ function featured_body_class( $classes ) {
  */
 function create_front_page_widgets() {
 
-	echo '<h2 class="screen-reader-text">' . __( 'Main Content', CHILD_TEXT_DOMAIN ) . '</h2>';
-	d( 'CHILD_TEXT_DOMAIN' );
+	echo '<h2 class="screen-reader-text">' . __( 'Main Content', 'dev-altitude-pro' ) . '</h2>';
+
 	genesis_widget_area( 'front-page-1', array(
 		'before' => '<div id="front-page-1" class="front-page-1" tabindex="-1"><div class="image-section"><div class="flexible-widgets widget-area' . widget_area_class( 'front-page-1' ) . '"><div class="wrap">',
 		'after'  => '</div></div></div></div>',
