@@ -191,7 +191,7 @@ function simple_social_default_styles( array $defaults ) {
 }
 
 /**
- * Custom Unregister Genesis callbacks.  We do this here because the child theme loads before Genesis.
+ * Unregister Genesis callbacks.
  *
  * @since 1.0.0
  *
