@@ -39,7 +39,7 @@ add_action( 'genesis_after_entry', 'genesis_after_entry_widget_area', 5 );
 
 // Relocate the post info.
 remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
-//add_action( 'genesis_entry_header', 'genesis_post_info', 5 );
+add_action( 'genesis_entry_header', 'genesis_post_info', 5 );
 
 
 add_filter( 'genesis_post_info', __NAMESPACE__ . '\customize_post_info_filter' );

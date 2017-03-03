@@ -1,8 +1,6 @@
 <?php
 
 /**
- *  Checked!
- *
  *  Sidebar (widgetized areas) HTML markup structure
  *
  *  @package    KnowITMedia\DevAltitudePro
