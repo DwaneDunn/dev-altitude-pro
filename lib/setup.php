@@ -1,8 +1,6 @@
 <?php
 
 /**
- *  Checked!
- *
  *  Setup theme defaults.
  *
  *  @package    KnowITMedia\DevAltitudePro
@@ -24,13 +22,36 @@ add_action( 'genesis_setup', __NAMESPACE__ . '\setup_child_theme', 15 );
  * @return void
  */
 function setup_child_theme() {
-
 	load_child_theme_textdomain( CHILD_TEXT_DOMAIN, CHILD_THEME_DIR . '/languages' );
+
+	unregister_genesis_callbacks();
 
 	adds_theme_supports();
 	adds_new_image_sizes();
-	unregister_genesis_callbacks();
+
 	register_front_page_sidebars();
+
+}
+
+/**
+ * Unregister Genesis callbacks. We do this here because the child theme loads before Genesis.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function unregister_genesis_callbacks() {
+	// Unregister menu settings
+	unregister_menu_callbacks();
+
+	// Unregister layout settings.
+	genesis_unregister_layout( 'content-sidebar-sidebar' );
+	genesis_unregister_layout( 'sidebar-content-sidebar' );
+	genesis_unregister_layout( 'sidebar-sidebar-content' );
+
+	// Unregister secondary sidebar.
+	unregister_sidebar( 'sidebar-alt' );
+
 
 }
 
@@ -127,7 +148,6 @@ function set_theme_settings_defaults( array $defaults ) {
 }
 
 add_action( 'after_switch_theme', __NAMESPACE__ . '\update_theme_settings_defaults' );
-
 /**
  * Updates theme settings on activation.
  *
@@ -187,24 +207,5 @@ function simple_social_default_styles( array $defaults ) {
 	$args = wp_parse_args( $args, $defaults );
 
 	return $args;
-
-}
-
-/**
- * Unregister Genesis callbacks.
- *
- * @since 1.0.0
- *
- * @return void
- */
-function unregister_genesis_callbacks() {
-
-	// Unregister layout settings.
-	genesis_unregister_layout( 'content-sidebar-sidebar' );
-	genesis_unregister_layout( 'sidebar-content-sidebar' );
-	genesis_unregister_layout( 'sidebar-sidebar-content' );
-
-	// Unregister secondary sidebar.
-	unregister_sidebar( 'sidebar-alt' );
 
 }

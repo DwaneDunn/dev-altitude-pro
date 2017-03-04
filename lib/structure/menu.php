@@ -3,8 +3,6 @@
 /**
  *  Menu HTML markup structure
  *
- *  Checked!
- *  
  *  @package    KnowITMedia\DevAltitudePro
  *  @since      1.0.0
  *  @author     Dwane Dunn
@@ -15,17 +13,32 @@
 
 namespace KnowITMedia\DevAltitudePro;
 
-// Unregister the header right widget area.
-unregister_sidebar( 'header-right' );
+/**
+ * Unregister menu callbacks.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function unregister_menu_callbacks() {
+
+	// Unregister the header right widget area.
+	unregister_sidebar( 'header-right' );
+
+	// Reposition the primary navigation menu.
+	remove_action( 'genesis_after_header', 'genesis_do_nav' );
+
+	// Remove output of primary navigation right extras.
+	remove_filter( 'genesis_nav_items', 'genesis_nav_right', 10, 2 );
+	remove_filter( 'wp_nav_menu_items', 'genesis_nav_right', 10, 2 );
+
+	// Reposition the secondary navigation menu.
+	remove_action( 'genesis_after_header', 'genesis_do_subnav' );
+
+}
 
 // Reposition the primary navigation menu.
-remove_action( 'genesis_after_header', 'genesis_do_nav' );
 add_action( 'genesis_header', 'genesis_do_nav', 12 );
-
-// Remove output of primary navigation right extras.
-remove_filter( 'genesis_nav_items', 'genesis_nav_right', 10, 2 );
-remove_filter( 'wp_nav_menu_items', 'genesis_nav_right', 10, 2 );
-
 
 add_action( 'genesis_theme_settings_metaboxes', __NAMESPACE__ . '\remove_genesis_metaboxes' );
 /**
@@ -40,9 +53,7 @@ function remove_genesis_metaboxes( $_genesis_theme_settings_pagehook ) {
 }
 
 // Reposition the secondary navigation menu.
-remove_action( 'genesis_after_header', 'genesis_do_subnav' );
 add_action( 'genesis_header', 'genesis_do_subnav', 5 );
-
 
 add_filter( 'genesis_skip_links_output', __NAMESPACE__ . '\change_skip_links_output' );
 /**
