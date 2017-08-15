@@ -5,10 +5,11 @@ html {
 	font-size: 62.5%; /* 10px browser default */
 }
 
-/* Chrome fix */
+/* Chrome fix
 body > div {
 	font-size: 2rem;
 }
+ */
 
 body {
 	background-color: #fff;
@@ -33,12 +34,7 @@ input[type="submit"],
 textarea:focus,
 .button,
 .site-header.dark {
-	transition:         all 0.2s ease-in-out;
-}
-
-::-moz-selection {
-	background-color: #000;
-	color: #fff;
+	transition: all 0.2s ease-in-out;
 }
 
 ::selection {

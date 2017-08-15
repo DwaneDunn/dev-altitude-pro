@@ -52,6 +52,14 @@ function unregister_genesis_callbacks() {
 	// Unregister secondary sidebar.
 	unregister_sidebar( 'sidebar-alt' );
 
+	// Relocate Post Info
+	unregister_post_callbacks();
+
+	// Relocate After Entry
+	unregister_comments_callbacks();
+
+	// Remove page elements from landing page.
+	//unregister_landing_page_callbacks();
 
 }
 
@@ -75,7 +83,7 @@ function adds_theme_supports() {
 			'skip-links'
 		),
 		'genesis-responsive-viewport' => 'null',
-		'genesis-footer-widgets' => 1, // 1-column footer widget area.
+		'genesis-footer-widgets' => 2, // 1-column footer widget area.
 		'genesis-menus' => array(
 			'secondary' => __( 'Before Header Menu', CHILD_TEXT_DOMAIN ),
 			'primary'   => __( 'Header Menu', CHILD_TEXT_DOMAIN ),

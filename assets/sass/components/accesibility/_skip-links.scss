@@ -1,26 +1,28 @@
 /* Skip Links
----------------------------------------------------------------------------------------------------- */
+--------------------------------------------------- */
 
 .genesis-skip-link {
 	margin: 0;
-}
 
-.genesis-skip-link li {
-	height: 0;
-	width: 0;
-	list-style: none;
+		& li {
+			height: 0;
+			width: 0;
+			list-style: none;
+		}
+
+		@media only screen and (max-width: 800px) {
+
+			& .skip-link-hidden {
+				display: none;
+				visibility: hidden;
+			}
+
+		}
+		
 }
 
 /* Display outline on focus */
 :focus {
 	color: #333;
 	outline: #ccc solid 1px;
-}
-
-@media only screen and (max-width: 800px) {
-
-	.genesis-skip-link .skip-link-hidden {
-		display: none;
-		visibility: hidden;
-	}
 }
